@@ -1,0 +1,294 @@
+/*Main*/
+
+.text {
+    display: block;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*background img*/
+.background_main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(fotos_videos/background.png);
+    background-size: cover;
+}
+
+.background_main2 {
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(fotos_videos/background_main2.png);
+    background-size: cover;
+}
+.article1{
+
+
+    position: relative;
+    top: 250px;
+    left: 450px;
+    width: 20vw;
+    min-height: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.article2{
+    border-left: dotted;
+    position: relative;
+    top: -100px;
+    left: 850px;
+    width: 30vw;
+    min-height: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+/*KEYFRAMES*/
+@keyframes pulseEffect {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*logo's in the middle*/
+.crest {
+    filter: drop-shadow(8px 8px 10px black);
+
+}
+
+.tree {
+    position: absolute;
+    top: 30vh;
+    left: 36.4vw;
+    filter: drop-shadow(8px 8px 10px green);
+    animation: pulseEffect 5s infinite;
+    transform: scale(0.8)
+}
+
+.sun {
+    position: absolute;
+    top: 30vh;
+    left: 52.6vw;
+    filter: drop-shadow(8px 8px 10px #ffce1f);
+    animation: pulseEffect 5s infinite;
+    transform: scale(0.8)
+}
+
+.moon {
+    position: absolute;
+    top: 57vh;
+    left: 34.3vw;
+    filter: drop-shadow(8px 8px 10px blue);
+    animation: pulseEffect 5s infinite;
+    transform: scale(0.8)
+}
+
+.air {
+    position: absolute;
+    top: 58vh;
+    left: 54.5vw;
+    filter: drop-shadow(8px 8px 10px silver);
+    animation: pulseEffect 5s infinite;
+    transform: scale(0.8)
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100vw;
+
+}
+
+.text {
+    width: 100%;
+    background-color: white;
+}
+/*photo of myself*/
+.me img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 100px;
+
+
+}
+
+h1 {
+    filter: drop-shadow(10px 10px 10px #000000);
+    font-size: 6rem;
+    font-family: "Freestyle Script", sans-serif;
+    padding: 4vw;
+    margin: 0;
+    color: rgb(255, 255, 255);
+
+}
+
+footer {
+    height: 2vw;
+    width: 100vw;
+    color: white;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+/*the menu on the aside*/
+.menu {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 200px;
+    top: 25%;
+    right: -180px;
+    position: fixed;
+    font-size: 1.5rem;
+    transition: 200ms ease;
+}
+.menu img{
+    height: 100px;
+    width: 100px;
+}
+
+.menu a {
+    color: white;
+}
+
+.menu:hover {
+    right: -110px;
+}
+
+header nav {
+    margin: 10px;
+}
+
+
+/*Gallery//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*background img */
+.background_gallery {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(fotos_videos/gallery_background.jpg);
+    background-size: cover;
+}
+
+/*first two photo's*/
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    opacity: 0.9;
+    justify-content: center;
+}
+
+.container div img {
+    height: 15vw;
+    width: 10vw;
+    padding: 0 10px;
+}
+
+/*last 2 photo's*/
+.container1 {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    opacity: 0.9;
+    justify-content: center;
+}
+
+.container1 div img {
+    height: 10vw;
+    width: 15vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+}
+
+/*Contact/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*background img*/
+.background_contact {
+    height: 100vh;
+    Width: 100vw;
+    background-image: url(fotos_videos/contact_background.jpg);
+    background-size: cover;
+}
+/*here we change the forum*/
+
+legend {
+    font-size: 2rem;
+}
+
+form {
+    width: 50%;
+
+}
+
+fieldset {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.51);
+}
+
+.contact-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 2em;
+    color: white;
+    padding-left: 10px;
+}
+
+input {
+    height: 20px;
+    padding-left: 30px;
+}
+
+legend {
+    color: #000000;
+    filter: drop-shadow(8px 8px 10px #ffffff);
+}
+/*Table///////////////////////////////////////////////////////////////*/
+.background_tabel{
+    height:100vh;
+    width: 100vw;
+    background-image: url("fotos_videos/tabel_background.jpg");
+    background-size: cover;
+}
+.table{
+    margin: 0 500px;
+    border: dotted;
+}
+table td{
+    color: white;
+}
+
+
+
+
