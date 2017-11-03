@@ -366,7 +366,10 @@ table td{
     font-size: 1.2rem;
     color: white;
 }
-
+.cv{
+    color: white;
+    padding: 10px;
+}
 
 
 
