@@ -8,14 +8,27 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+/*quote in the header*/
+.quote{
+    position: fixed;
+    font-size: 3.0rem;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    filter: drop-shadow(10px 10px 10px #000000);
+    font-family: "French Script MT", sans-serif;
+}
 
 /*background img*/
 .background_main {
     width: 100vw;
     height: 100vh;
-    background-image: url(fotos_videos/background.png);
+    background: url(fotos_videos/background.png) fixed;
     background-size: cover;
+    z-index: 1;
 }
+
+
 
 .background_main2 {
     position: absolute;
@@ -24,33 +37,53 @@ body {
     height: 100vh;
     background-image: url(fotos_videos/background_main2.png);
     background-size: cover;
+
 }
+/*the article*/
 .article1{
-
-
     position: relative;
     top: 250px;
     left: 450px;
-    width: 20vw;
+    width: 20%;
     min-height: 0;
     font-size: 1.5rem;
     text-align: center;
+}
+.article1 h2{
+    color: rgba(255, 255, 255, 0.72);
+    filter: drop-shadow(10px 10px 10px #ff78a6);
+}
+.article1 p{
+    filter: drop-shadow(10px 10px 10px #ff78a6);
 }
 .article2{
     border-left: dotted;
     position: relative;
     top: -100px;
     left: 850px;
-    width: 30vw;
+    width: 30%;
     min-height: 0;
     font-size: 1.5rem;
     text-align: center;
+    padding-left: 10px;
+}
+.article2 h2{
+    color: rgba(53,33,43,0.87);
+    filter: drop-shadow(10px 10px 10px #783d62);
+}
+.article2 p{
+    filter: drop-shadow(10px 10px 10px #783d62);
 }
 
+audio{
 
+    position: fixed;
+    width: 100px;
+    padding:100px 0 0 10px;
 
+}
 
-/*KEYFRAMES*/
+/*keyframes PulseEffect*/
 @keyframes pulseEffect {
 
     0% {
@@ -72,36 +105,36 @@ body {
 }
 
 .tree {
-    position: absolute;
-    top: 30vh;
-    left: 36.4vw;
+    position: fixed;
+    top: 29.5vh;
+    left: 36vw;
     filter: drop-shadow(8px 8px 10px green);
     animation: pulseEffect 5s infinite;
     transform: scale(0.8)
 }
 
 .sun {
-    position: absolute;
-    top: 30vh;
-    left: 52.6vw;
+    position: fixed;
+    top: 29.7vh;
+    left: 52.1vw;
     filter: drop-shadow(8px 8px 10px #ffce1f);
     animation: pulseEffect 5s infinite;
     transform: scale(0.8)
 }
 
 .moon {
-    position: absolute;
-    top: 57vh;
-    left: 34.3vw;
+    position: fixed;
+    top: 56vh;
+    left: 34vw;
     filter: drop-shadow(8px 8px 10px blue);
     animation: pulseEffect 5s infinite;
     transform: scale(0.8)
 }
 
 .air {
-    position: absolute;
-    top: 58vh;
-    left: 54.5vw;
+    position: fixed;
+    top: 57vh;
+    left: 53.8vw;
     filter: drop-shadow(8px 8px 10px silver);
     animation: pulseEffect 5s infinite;
     transform: scale(0.8)
@@ -116,7 +149,7 @@ header {
 }
 
 main {
-    width: 100vw;
+    width: auto;
 
 }
 
@@ -126,8 +159,10 @@ main {
 }
 /*photo of myself*/
 .me img{
+    position: fixed;
     height: 200px;
     width: 200px;
+    margin-top: 250px;
     border-radius: 50%;
     margin-left: 100px;
 
@@ -135,18 +170,19 @@ main {
 }
 
 h1 {
+    position: fixed;
     filter: drop-shadow(10px 10px 10px #000000);
     font-size: 6rem;
     font-family: "Freestyle Script", sans-serif;
-    padding: 4vw;
-    margin: 0;
+    margin-top: 50px;
+    margin-left: 50px;
     color: rgb(255, 255, 255);
 
 }
 
 footer {
-    height: 2vw;
-    width: 100vw;
+
+    width: auto;
     color: white;
     font-size: 0.8rem;
     position: absolute;
@@ -154,19 +190,23 @@ footer {
     bottom: 0;
     margin: 0 auto;
     text-align: center;
+    vertical-align: bottom;
 }
 /*the menu on the aside*/
 .menu {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 50%;
-    width: 200px;
+    width: 100px;
     top: 25%;
-    right: -180px;
+    right: 5px;
     position: fixed;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: 200ms ease;
+    font-family: "Freestyle Script", sans-serif;
+    box-shadow: 0 0 5px 5px #ffffff;
 }
 .menu img{
     height: 100px;
@@ -178,9 +218,23 @@ footer {
 }
 
 .menu:hover {
-    right: -110px;
+    animation: pulse 2.5s forwards;
 }
+/*keyframe pulse box shadow*/
+@keyframes pulse{
+    0% {
 
+        box-shadow: 0 0 20px 20px rgb(255, 255, 255);
+    }
+    50% {
+
+        box-shadow: 0 0 10px 10px rgba(204,169,44, 0);
+    }
+    100% {
+        box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    }
+}
+}
 header nav {
     margin: 10px;
 }
@@ -223,8 +277,7 @@ header nav {
 .container1 div img {
     height: 10vw;
     width: 15vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    padding: 15px 15px;
 
 }
 
@@ -257,22 +310,40 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    width: 100%;
 }
 
 label {
     font-size: 2em;
     color: white;
-    padding-left: 10px;
 }
 
 input {
-    height: 20px;
-    padding-left: 30px;
+    height: 30px;
+}
+input:focus{
+    box-shadow: 0 0 5px 5px #f0c071 inset;
+}
+textarea{
+    height: 150px;
+    width: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+textarea:focus{
+    box-shadow: 0 0 5px 5px #f0c071 inset;
 }
 
 legend {
-    color: #000000;
-    filter: drop-shadow(8px 8px 10px #ffffff);
+    color: #f0c071;
+    filter: drop-shadow(8px 8px 10px #000000);
+}
+.submit{
+    color: #783d62;
+    border: 1px solid #b54515;
+
 }
 /*Table///////////////////////////////////////////////////////////////*/
 .background_tabel{
@@ -285,7 +356,14 @@ legend {
     margin: 0 500px;
     border: dotted;
 }
+caption{
+    font-size: 2rem;
+}
+table.hd{
+    font-size: 1.2rem;
+}
 table td{
+    font-size: 1.2rem;
     color: white;
 }
 
