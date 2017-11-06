@@ -158,16 +158,37 @@ main {
     background-color: white;
 }
 /*photo of myself*/
-.me img{
+.me img {
     position: fixed;
     height: 200px;
     width: 200px;
     margin-top: 250px;
     border-radius: 50%;
     margin-left: 100px;
-
+    box-shadow: 0 0 5px 5px #ffffff;
+    animation: pulse1 2s infinite;
 
 }
+
+@keyframes pulse1{
+    0% {
+
+        box-shadow: 0 0 5px 5px rgba(79, 79, 79, 0.71);
+    }
+    25% {
+
+        box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+    }
+    25% {
+
+        box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    }
+    100% {
+
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.71);
+    }
+}
+
 
 h1 {
     position: fixed;
@@ -218,10 +239,10 @@ footer {
 }
 
 .menu:hover {
-    animation: pulse 2.5s forwards;
+    animation: pulse3 2.5s forwards;
 }
 /*keyframe pulse box shadow*/
-@keyframes pulse{
+@keyframes pulse3{
     0% {
 
         box-shadow: 0 0 20px 20px rgb(255, 255, 255);
@@ -234,7 +255,9 @@ footer {
         box-shadow: 0 0 5px 5px rgb(255, 255, 255);
     }
 }
-}
+
+
+
 header nav {
     margin: 10px;
 }
@@ -257,12 +280,19 @@ header nav {
     flex-flow: wrap;
     opacity: 0.9;
     justify-content: center;
+
+}
+.container div img:hover{
+    animation: pulse 2s forwards;
+
+
 }
 
 .container div img {
     height: 15vw;
     width: 10vw;
-    padding: 0 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px 5px #ffffff;
 }
 
 /*last 2 photo's*/
@@ -272,13 +302,33 @@ header nav {
     flex-flow: wrap;
     opacity: 0.9;
     justify-content: center;
+
+
+}
+.container1 div img:hover {
+    animation: pulse 2s forwards;
+
 }
 
 .container1 div img {
     height: 10vw;
     width: 15vw;
-    padding: 15px 15px;
+    padding: 15px;
+    box-shadow: 0 0 5px 5px #ffffff;
 
+}
+@keyframes pulse{
+    0% {
+
+        box-shadow: 0 0 10px 10px rgb(255, 255, 255.2);
+    }
+    50% {
+
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.99);
+    }
+    100% {
+        box-shadow: 0 0 10px 10px rgb(0, 0, 0.2);
+    }
 }
 
 /*Contact/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -369,6 +419,9 @@ table td{
 .cv{
     color: white;
     padding: 10px;
+    font-size: 1.5rem;
+    border:dotted;
+    border-color: black;
 }
 
 
